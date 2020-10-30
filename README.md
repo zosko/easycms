@@ -1,4 +1,4 @@
-EasyCMS - Version 1.0
+[YEAR 2009] EasyCMS - Version 1.0
 
 How to install?
 
