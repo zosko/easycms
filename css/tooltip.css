@@ -1,0 +1,30 @@
+#dhtmltooltip
+{
+	border-right: black 1px solid;
+	padding-right: 4px;
+	padding-left: 4px;
+	border-top: black 1px solid;
+	font-size: 10pt;
+	left: -300px;
+	z-index: 100;
+	filter: alpha(opacity=90);
+	visibility: hidden;
+	padding-bottom: 4px;
+	border-left: black 1px solid;
+	padding-top: 4px;
+	border-bottom: black 1px solid;
+	font-family: Arial;
+	position: absolute;
+	background-color: lightyellow;
+	width: 400px !important;
+}
+#dhtmlpointer
+{
+	z-index: 101;
+	left: -300px;
+	visibility: hidden;
+	position: absolute;
+}
+
+
+
