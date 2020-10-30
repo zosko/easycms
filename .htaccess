@@ -1,0 +1,121 @@
+#ZA LINKOVITE
+Options +FollowSymLinks
+Options -Indexes
+RewriteEngine On
+#RewriteBase /
+#STRANICENJE
+
+
+#PREDNO MENI
+RewriteRule ^vest-([^-]*)\.html$ vest.php?id=$1 [L]
+RewriteRule ^sekcija-([^-]*)\.html$ index.php?sekcija=$1 [L]
+RewriteRule ^video-([^-]*)\.html$ video.php?id=$1 [L]
+RewriteRule ^galerija-([^-]*)\.html$ galerija.php?id=$1 [L]
+RewriteRule ^reklama-([^-]*)\.html$ baneri.php?id=$1 [L]
+RewriteRule ^pocetna/?$ index.php [L]
+RewriteRule ^rss/?$ rss.php [L]
+RewriteRule ^install/?$ install.php [L]
+RewriteRule ^kontakt/?$ kontakt.php [L]
+RewriteRule ^videoteka/?$ video.php [L]
+RewriteRule ^denesni/?$ najnovi.php [L]
+RewriteRule ^sitemap/?$ sitemap.php [L]
+RewriteRule ^baraj/?$ prebaraj.php [L]
+RewriteRule ^baraj-([^-]*)\.html$ prebaraj.php?baraj=$1 [L]
+
+#ADMIN MENI
+RewriteRule ^admin/admin-login/?$ admin/index.php [L]
+RewriteRule ^admin/admin-pocetna/?$ admin/admin.php [L]
+RewriteRule ^admin/admin-podesuvanja/?$ admin/admin.php?akcija=podesuvanja [L]
+RewriteRule ^admin/admin-statistika/?$ admin/admin.php?akcija=statistika [L]
+RewriteRule ^admin/admin-sandace/?$ admin/admin.php?akcija=sandace [L]
+RewriteRule ^admin/admin-sekcii/?$ admin/admin.php?akcija=sekcii [L]
+RewriteRule ^admin/admin-meteo/?$ admin/admin.php?akcija=meteo [L]
+RewriteRule ^admin/admin-jazik/?$ admin/admin.php?akcija=jazik [L]
+RewriteRule ^admin/admin-vest/?$ admin/vest.php [L]
+RewriteRule ^admin/admin-video/?$ admin/video.php [L]
+RewriteRule ^admin/admin-galerija/?$ admin/galerija.php [L]
+RewriteRule ^admin/admin-reklami/?$ admin/reklami.php [L]
+RewriteRule ^admin/admin-korisnici/?$ admin/korisnici.php [L]
+RewriteRule ^admin/admin-radio/?$ admin/radio.php [L]
+RewriteRule ^admin/admin-anketa/?$ admin/anketa.php [L]
+RewriteRule ^admin/admin-izlez/?$ admin/izlez.php [L]
+
+#ADMIN IZLEZ
+RewriteRule ^admin/admin-logout/?$ admin/izlez.php?akcija=logout [L]
+
+#ADMIN ANKETA
+RewriteRule ^admin/admin-anketa-dodadi/?$ admin/anketa.php?akcija=dodadi_anketa [L]
+RewriteRule ^admin/admin-anketa-lista/?$ admin/anketa.php?akcija=anketi_lista [L]
+RewriteRule ^admin/admin-anketa-objavi-([^-]*)\.html$ admin/anketa.php?akcija=anketa_objavi&id=$1 [L]
+RewriteRule ^admin/admin-anketa-neobjavi-([^-]*)\.html$ admin/anketa.php?akcija=anketa_neobjavi&id=$1 [L]
+RewriteRule ^admin/admin-anketa-promeni-([^-]*)\.html$ admin/anketa.php?akcija=anketa_promeni&id=$1 [L]
+RewriteRule ^admin/admin-anketa-izbrisi-([^-]*)\.html$ admin/anketa.php?akcija=anketa_izbrisi&id=$1 [L]
+RewriteRule ^admin/admin-anketa-izbrisi-odgovor-([^-]*)\.html$ admin/anketa.php?akcija=anketa_izbrisi_odgovor&id=$1 [L]
+
+#ADMIN RADIO
+RewriteRule ^admin/admin-radio-dodadi/?$ admin/radio.php?akcija=dodadi_radio [L]
+RewriteRule ^admin/admin-radio-lista/?$ admin/radio.php?akcija=lista_radio [L]
+RewriteRule ^admin/admin-radio-promeni-([^-]*)\.html$ admin/radio.php?akcija=editiraj_radio&id=$1 [L]
+RewriteRule ^admin/admin-radio-objavi-([^-]*)\.html$ admin/radio.php?akcija=objavi_radio&id=$1 [L]
+RewriteRule ^admin/admin-radio-neobjavi-([^-]*)\.html$ admin/radio.php?akcija=neobjavi_radio&id=$1 [L]
+RewriteRule ^admin/admin-radio-izbrisi-([^-]*)\.html$ admin/radio.php?akcija=brisi_radio&id=$1 [L]
+
+#ADMIN KORISNICI
+RewriteRule ^admin/admin-korisnici-dodadi/?$ admin/korisnici.php?akcija=korisnici [L]
+RewriteRule ^admin/admin-korisnici-lista/?$ admin/korisnici.php?akcija=korisnik_lista [L]
+RewriteRule ^admin/admin-korisnici-promeni-([^-]*)\.html$ admin/korisnici.php?akcija=promeni_korisnik&id=$1 [L]
+RewriteRule ^admin/admin-korisnici-aktiviraj-([^-]*)\.html$ admin/korisnici.php?akcija=aktiviraj_korisnik&id=$1 [L]
+RewriteRule ^admin/admin-korisnici-deaktiviraj-([^-]*)\.html$ admin/korisnici.php?akcija=deaktiviraj_korisnik&id=$1 [L]
+RewriteRule ^admin/admin-korisnici-izbrisi-([^-]*)\.html$ admin/korisnici.php?akcija=brisi_korisnik&id=$1 [L]
+
+#ADMIN REKLAMI
+RewriteRule ^admin/admin-reklami-dodadi/?$ admin/reklami.php?akcija=dodadi_reklama [L]
+RewriteRule ^admin/admin-reklami-lista/?$ admin/reklami.php?akcija=editiraj_reklami [L]
+RewriteRule ^admin/admin-reklami-promeni-([^-]*)\.html$ admin/reklami.php?akcija=editiraj_reklama&id=$1 [L]
+RewriteRule ^admin/admin-reklami-objavi-([^-]*)\.html$ admin/reklami.php?akcija=objavi_reklama&id=$1 [L]
+RewriteRule ^admin/admin-reklami-neobjavi-([^-]*)\.html$ admin/reklami.php?akcija=neobjavi_reklama&id=$1 [L]
+RewriteRule ^admin/admin-reklami-brisi-([^-]*)\.html$ admin/reklami.php?akcija=brisi_reklama&id=$1 [L]
+RewriteRule ^admin/admin-reklami-resetiraj-([^-]*)\.html$ admin/reklami.php?akcija=resetiraj_reklama&id=$1 [L]
+
+#ADMIN GALERIJA
+RewriteRule ^admin/admin-galerija-dodadi/?$ admin/galerija.php?akcija=dodadi_galerija [L]
+RewriteRule ^admin/admin-galerija-lista/?$ admin/galerija.php?akcija=editiraj_galerija [L]
+RewriteRule ^admin/admin-galerija-promeni-([^-]*)\.html$ admin/galerija.php?akcija=edit_galerija&id=$1 [L]
+RewriteRule ^admin/admin-galerija-objavi-([^-]*)\.html$ admin/galerija.php?akcija=objavi_galerija&id=$1 [L]
+RewriteRule ^admin/admin-galerija-neobjavi-([^-]*)\.html$ admin/galerija.php?akcija=neobjavi_galerija&id=$1 [L]
+RewriteRule ^admin/admin-galerija-izbrisi-([^-]*)\.html$ admin/galerija.php?akcija=brisi_galerija&id=$1 [L]
+RewriteRule ^admin/admin-galerija-izbrisi-slika-([^-]*)\.html$ admin/galerija.php?akcija=brisi_slika_galerija&id=$1 [L]
+RewriteRule ^admin/admin-galerija-stavi-naslovna-galerija-([^-]*)-slika-([^-]*)\.html$ admin/galerija.php?akcija=naslovna_slika_galerija&id_galerija=$1&id=$2 [L]
+
+#ADMIN VIDEO
+RewriteRule ^admin/admin-video-dodadi/?$ admin/video.php?akcija=dodadi_video [L]
+RewriteRule ^admin/admin-video-lista/?$ admin/video.php?akcija=editiraj_video [L]
+RewriteRule ^admin/admin-video-promeni-([^-]*)\.html$ admin/video.php?akcija=promeni_video&id=$1 [L]
+RewriteRule ^admin/admin-video-objavi-([^-]*)\.html$ admin/video.php?akcija=objavi_video&id=$1 [L]
+RewriteRule ^admin/admin-video-neobjavi-([^-]*)\.html$ admin/video.php?akcija=neobjavi_video&id=$1 [L]
+RewriteRule ^admin/admin-video-izbrisi-([^-]*)\.html$ admin/video.php?akcija=brisi_video&id=$1 [L]
+
+#ADMIN VEST
+RewriteRule ^admin/admin-vest-dodadi/?$ admin/vest.php?akcija=dodadi_vest [L]
+RewriteRule ^admin/admin-vest-lista/?$ admin/vest.php?akcija=editiraj_vest [L]
+RewriteRule ^admin/admin-flash-news/?$ admin/vest.php?akcija=flash_news [L]
+RewriteRule ^admin/admin-vest-promeni-([^-]*)\.html$ admin/vest.php?akcija=promeni_vest&id=$1 [L]
+RewriteRule ^admin/admin-vest-objavi-([^-]*)\.html$ admin/vest.php?akcija=objavi_vest&id=$1 [L]
+RewriteRule ^admin/admin-vest-neobjavi-([^-]*)\.html$ admin/vest.php?akcija=neobjavi_vest&id=$1 [L]
+RewriteRule ^admin/admin-vest-izbrisi-([^-]*)\.html$ admin/vest.php?akcija=brisi_vest&id=$1 [L]
+
+#ADMIN SEKCII
+RewriteRule ^admin/admin-sekcii-promeni-([^-]*)\.html$ admin/admin.php?akcija=promeni_sekcija&id=$1 [L]
+RewriteRule ^admin/admin-sekcii-objavi-([^-]*)\.html$ admin/admin.php?akcija=objavi_sekcija&id=$1 [L]
+RewriteRule ^admin/admin-sekcii-neobjavi-([^-]*)\.html$ admin/admin.php?akcija=neobjavi_sekcija&id=$1 [L]
+RewriteRule ^admin/admin-sekcii-izbrisi-([^-]*)\.html$ admin/admin.php?akcija=brisi_sekcija&id=$1 [L]
+
+#ADMIN SANDACE
+RewriteRule ^admin/admin-poraka-procitaj-([^-]*)\.html$ admin/admin.php?akcija=procitaj_poraka&id=$1 [L]
+RewriteRule ^admin/admin-poraka-izbrisi-([^-]*)\.html$ admin/admin.php?akcija=poraka_izbrisi&id=$1 [L]
+
+#POJAVUVANJE NA GRESKI
+ErrorDocument 401 "<html><head><title>Greska</title></head><body><br /><br /><br /><br /><br /><br /><br /><br /><center><h1><tt>Nepostoi takva stranica</tt></h1></center></body></html>
+ErrorDocument 403 "<html><head><title>Greska</title></head><body><br /><br /><br /><br /><br /><br /><br /><br /><center><h1><tt>Nepostoi takva stranica</tt></h1></center></body></html>
+ErrorDocument 404 "<html><head><title>Greska</title></head><body><br /><br /><br /><br /><br /><br /><br /><br /><center><h1><tt>Nepostoi takva stranica</tt></h1></center></body></html>  
+ErrorDocument 500 "<html><head><title>Greska</title></head><body><br /><br /><br /><br /><br /><br /><br /><br /><center><h1><tt>Problem do serverot</tt></h1></center></body></html>
