@@ -1,2 +1,0 @@
-# easycms
-Easy CMS 
