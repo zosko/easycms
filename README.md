@@ -10,3 +10,5 @@ How to install?
 6. Installation is complete
 7. Open the administrative section and log in with username: admin and password: admin
 8. Enjoy!
+
+![Example](admin/sliki/reklami_mapa.png)
